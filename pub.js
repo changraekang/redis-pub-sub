@@ -1,8 +1,8 @@
 var redis = require('redis');
 var subscriber = redis.createClient();
 var publisher = redis.createClient();
-//var subscriber = redis.createClient(9000, 'redis-service.test-wallet.svc.cluster.local');
-//var publisher = redis.createClient(9000, 'redis-service.test-wallet.svc.cluster.local');
+var subscriber = redis.createClient(9000, 'redis-service.kang-web-test.svc.cluster.local');
+var publisher = redis.createClient(9000, 'redis-service.kang-web-test.svc.cluster.local');
 var msg_count = 0;
 
 subscriber.on('subscribe', function (channel, count) {
